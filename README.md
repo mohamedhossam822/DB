@@ -1,3 +1,1 @@
-DB
-
-Social media platform
+Social Media Platform
