@@ -1,0 +1,102 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+}
+body {
+  background: rgb(130, 0, 7);
+  background: linear-gradient(
+    90deg,
+    rgba(130, 0, 7, 1) 11%,
+    rgba(0, 20, 145, 1) 41%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+#login .login-block {
+  margin-top: 150px;
+  margin-left: 230px;
+}
+
+#login .login-block .image-window img {
+  width: 700px;
+  height: 450px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#login .login-block .image-window {
+  width: 700px;
+  height: 450px;
+  left: 350px;
+  position: absolute;
+  margin-left: 230px;
+}
+
+#login .login-block .form-container {
+  width: 350px;
+  height: 450px;
+  background: white;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+}
+
+#login .login-block .form-container h1 {
+  margin-top: 65px;
+  text-align: center;
+  color: rgb(0, 7, 56);
+}
+
+#login .login-block .form-container form {
+  margin-top: 50px;
+}
+
+#login .login-block .form-container input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: rgb(0, 7, 56);
+  color: rgb(0, 7, 56);
+  background: none;
+  margin-bottom: 30px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+#login .login-block .form-container input::placeholder {
+  color: rgb(185, 0, 9);
+}
+
+#login .login-block .form-container a {
+  font-size: 14px;
+  /*padding-left: 10px;*/
+  text-align: center;
+  color: rgb(130, 0, 7);
+}
+
+#login .login-block .form-container hr {
+  width: 35%;
+  height: 1.5px;
+  background-color: rgb(0, 7, 56);
+}
+
+#login .login-block .form-container a:hover {
+  color: rgba(0, 20, 145, 1);
+  text-decoration: none;
+}
+
+#login .login-block .form-container button {
+  margin-top: 15px;
+  margin-left: 38%;
+  margin-bottom: 10px;
+  display: block;
+  border: hidden;
+  border-radius: 10px;
+  padding: 10px 20px 10px 20px;
+  background-color: rgba(130, 0, 7, 1);
+  color: white;
+  font-size: 16px;
+  box-shadow: 2px 2px 10px 2px lightgray;
+}
+#login .login-block .form-container button:hover {
+  background-color: rgba(0, 20, 145, 1);
+  color: white;
+}

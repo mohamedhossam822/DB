@@ -5,16 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
     <title>Login</title>
 </head>
 
 <body>
-    <div>
-        <form method="POST" name="login-form">
-            <input name="email" type="email">
-            <input name="password" type="password">
-        </form>
-    </div>
+    <section id="login">
+        <div class="login-block">
+            <div class="image-window">
+                <img src="res/triangle2.jpg"></img>
+            </div>
+            <div class="form-container">
+                <h1>Member Login</h1>
+                <hr>
+                <form method="POST" name="login-form">
+                    <input name="email" type="email" placeholder="Email Address">
+                    <input name="password" type="password" placeholder="Password">
+                    <button type="submit">Login</button>
+                    <a href="index.html">Forget your password ?</a>
+                </form>
+            </div>
+        </div>
+    </section>
 
 </body>
 
