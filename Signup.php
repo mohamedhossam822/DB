@@ -1,3 +1,8 @@
+<?php
+
+require_once 'SignupValid.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +24,7 @@
         <div class="form-container">
             <h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1">Shift User Sign-Up</h1>
             <hr>
-            <form method="POST" action="InsertUser.php" name="login-form">
+            <form method="POST" action="Signup.php" name="login-form">
                 <div class="container">
                     <div class="row">
                         <input class="col-md-4 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.5s"
@@ -57,8 +62,8 @@
                 </div>
                 <div class="btn-group">
                     <button role="button" class="btn btn-primary wow fadeInLeft" data-wow-duration="1s"
-                        data-wow-delay="1s" type="submit">Submit</button>
-                    <a href="index.html" role="button" class="btn btn-primary wow fadeInRight" data-wow-duration="1s"
+                        data-wow-delay="1s" type="submit" name="submit">Submit</button>
+                    <a href="index.php" role="button" class="btn btn-primary wow fadeInRight" data-wow-duration="1s"
                         data-wow-delay="1s">Back to login</a>
                 </div>
             </form>

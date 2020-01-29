@@ -30,7 +30,7 @@
                     <div class="btn-group">
                         <button role="button" class="btn btn-primary wow fadeInLeft" data-wow-duration="1s"
                             data-row-delay="1s" type="submit">Login</button>
-                        <a href="Signup.html" role="button" class="btn btn-primary wow fadeInRight"
+                        <a href="Signup.php" role="button" class="btn btn-primary wow fadeInRight"
                             data-wow-duration="1s" data-row-delay="1s">Sign-Up</a>
                     </div>
                     <a class="forget wow fadeInUp" data-wow-duration="1s" data-row-delay="1s" href="index.html">Forget
