@@ -1,6 +1,5 @@
 <?php
-
-require_once 'SignupValid.php';
+include 'SignupValid.php';
 ?>
 
 <!DOCTYPE html>

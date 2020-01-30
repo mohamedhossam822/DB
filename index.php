@@ -1,3 +1,6 @@
+<?php
+include 'LoginCheck.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,14 +25,15 @@
             <div class="form-container">
                 <h2 class="wow fadeInDown" data-wow-duration="1s" data-row-delay="0.5s">Member Login</h2>
                 <hr>
-                <form method="POST" name="login-form">
+                <form method="POST" action="index.php"name="login-form">
                     <input class="wow fadeInUp" data-wow-duration="1s" data-row-delay="1s" name="email" type="email"
                         placeholder="Email Address">
                     <input class="wow fadeInUp" data-wow-duration="1s" data-row-delay="1.5s" name="password"
                         type="password" placeholder="Password">
+                        <div class="red-text"><?php echo $error; ?></div>
                     <div class="btn-group">
                         <button role="button" class="btn btn-primary wow fadeInLeft" data-wow-duration="1s"
-                            data-row-delay="1s" type="submit">Login</button>
+                            data-row-delay="1s" type="submit" name="submit">Login</button>
                         <a href="Signup.php" role="button" class="btn btn-primary wow fadeInRight"
                             data-wow-duration="1s" data-row-delay="1s">Sign-Up</a>
                     </div>
