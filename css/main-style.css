@@ -1,0 +1,238 @@
+* {
+  font-family: "Play", sans-serif;
+}
+
+body {
+  background: lightgray;
+}
+
+#navbar .navbar {
+  background: rgb(130, 0, 7);
+  background: linear-gradient(
+    90deg,
+    rgba(130, 0, 7, 1) 11%,
+    rgba(0, 20, 145, 1) 41%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+#navbar .navbar .navbar-brand {
+  color: white;
+  margin-right: 20px;
+}
+
+#navbar .navbar .navbar-brand img {
+  margin-right: 5px;
+}
+
+#navbar .navbar ul li a {
+  color: white;
+}
+
+#navbar .navbar ul li a i {
+  color: white;
+  margin-right: 5px;
+}
+
+#navbar .navbar ul li a:hover {
+  color: white;
+  background-color: rgba(31, 31, 31, 0.479);
+  border-radius: 5px;
+}
+
+#navbar .navbar form button {
+  color: white;
+  border-color: white;
+  border-radius: 20px;
+}
+
+#navbar .navbar form input {
+  color: white;
+  border-radius: 20px;
+}
+
+#navbar .navbar form button:hover {
+  color: rgb(130, 0, 7);
+  background-color: white;
+}
+
+#navbar .navbar ul .dropdown-menu a {
+  color: rgb(130, 0, 7);
+}
+
+#navbar .navbar ul .dropdown-menu a:hover {
+  color: rgb(130, 0, 7);
+  background-color: rgb(238, 238, 238);
+  border-radius: 0px;
+}
+
+#navbar .navbar ul .dropdown-menu {
+  margin-top: 8px;
+}
+
+#news-feed .row {
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+#news-feed .profile {
+  /*border: 2px solid black;*/
+  margin-right: 20px;
+  height: max-content;
+  background-color: white;
+  border-radius: 10px;
+}
+
+#news-feed .posts {
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 10px;
+}
+
+#news-feed .new-post {
+  margin-left: 20px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0;
+  height: max-content;
+}
+
+#news-feed .profile .profile-sidebar {
+  background-color: white;
+  text-align: center;
+}
+
+#news-feed .profile .profile-sidebar .profile-userpic img {
+  width: 60%;
+  border-radius: 50%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#news-feed .profile .profile-sidebar .profile-usertitle-name {
+  font-size: 18px;
+}
+
+#news-feed .profile .profile-sidebar .profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#news-feed .profile .profile-sidebar .profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;
+  margin-right: 5px;
+}
+
+#news-feed .new-post h3 {
+  text-align: center;
+  color: white;
+  background: linear-gradient(#01037c, #da0303);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#news-feed .new-post .form-container textarea,
+select {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+
+#news-feed .new-post .form-container .btn {
+  float: right;
+  text-transform: uppercase;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+
+#news-feed .new-post .dropholder {
+  width: 90%;
+  border-radius: 10px;
+  font: 18px arial;
+  color: #fff;
+  position: relative;
+}
+#news-feed .new-post .dropholder:hover,
+.dropholder:hover:after {
+  animation-play-state: paused;
+}
+
+#news-feed .new-post p {
+  line-height: 60px;
+}
+#news-feed .new-post .dropdown2,
+.dropholder {
+  background: linear-gradient(#01037c, #da0303);
+}
+#news-feed .new-post .dropdown2 {
+  margin-left: 20px;
+  float: left;
+  width: 100%;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 58px;
+  position: relative;
+}
+#news-feed .new-post .dropdown2:hover {
+  background: linear-gradient(#01037c, #da0303);
+}
+#news-feed .new-post .dropdown2:after {
+  content: "▾";
+  font-size: 18px;
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  display: block;
+}
+
+#news-feed .new-post .menu {
+  position: absolute;
+  right: 0;
+  top: 70px;
+  cursor: pointer;
+  opacity: 0;
+  transform-style: preserve-3d;
+  transform: rotatey(180deg) rotateX(5deg) translatey(100px);
+  backface-visibility: hidden;
+  background: linear-gradient(#01037c, #da0303);
+  border-radius: 10px;
+  transition: all 0.8s;
+  z-index: 5;
+  overflow: hidden;
+}
+
+#news-feed .new-post .menu li {
+  padding: 10px 10px;
+  border-bottom: 1px solid #fff;
+  color: #e8f8ff;
+  transition: all 0.3s;
+}
+
+#news-feed .new-post .menu li:hover {
+  background: white;
+  color: Red;
+  padding-left: 20px;
+}
+
+#news-feed .new-post .menu li:last-child {
+  border: none;
+}
+
+#news-feed .new-post .showMenu {
+  opacity: 1;
+  transform: rotateX(0deg) translatey(0px);
+}
