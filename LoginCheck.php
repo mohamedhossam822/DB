@@ -11,6 +11,8 @@
     $select = mysqli_query($DBConnect,$sql);
     if(mysqli_num_rows($select)>0)
     {
+      session_start();
+      $_SESSION['email']=$email;
       header("Location: Mainpage.php");
     }
     else
