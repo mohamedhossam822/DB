@@ -62,7 +62,8 @@ body {
 
 #navbar .navbar ul .dropdown-menu a:hover {
   color: rgb(130, 0, 7);
-  background-color: darkgray;
+  background-color: rgb(238, 238, 238);
+  border-radius: 0px;
 }
 
 #navbar .navbar ul .dropdown-menu {
