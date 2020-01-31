@@ -18,19 +18,23 @@ function check_password ()
 function check_username_all_char (test) //need to be checked again
 {
  let i=0;
+ let flag=0;
  for (i in test )
  {
 
 	 if (test[i]=='0' || test[i]=='1' || test[i]=='2' || test[i]=='3' || test[i]=='4' || test[i]=='5' || test[i]=='6' || test[i]=='7' || test[i]=='8' || test[i]=='9' )
      {
+            flag=1;
 
-
-
-            return 1;
-            break ;
      }
+		 if (flag)
+		 {
+			 return flag;
+			 break;
+		 }
+
  }
- return 0 ;
+ return flag ;
 
 }
 function check_first_name()
@@ -102,7 +106,7 @@ function check_all ()
 {
 
 	if (check_first_name() && check_Last_name()  && check_email() && check_password () && check_number())
-		 data ();
+		 console.log("welcome summoner ");//proceed
 
 }
 

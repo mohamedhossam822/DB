@@ -23,19 +23,23 @@ include 'SignupValid.php';
         <div class="form-container">
             <h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1">Shift User Sign-Up</h1>
             <hr>
-            <form method="POST" action="Signup.php" name="login-form">
+            <form method="POST" action="Signup.php" name="login-form" onsubmit="return (check_all())">
                 <div class="container">
                     <div class="row">
                         <input class="col-md-4 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.5s"
                             name="first-name" type="text" placeholder="First Name">
+                            <span id="FN_msg"> enter your first name </span>
                         <input class="col-md-4 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.5s"
                             name="last-name" type="text" placeholder="Last Name">
+                            <span id="LN_msg"> enter your last name </span>
                         <input class="col-md-7 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.6s" name="email"
                             type="email" placeholder="Email Address">
+                            <span id="email_msg"> invalid mail </span>
                         <input class="col-md-4 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.7s"
                             name="password" type="password" placeholder="Password">
                         <input class="col-md-4 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.7s"
                             name="confirm-password" type="password" placeholder="Confirm Password">
+                            <span id="password_msg"> non matching password </span>
                         <input class="col-md-4 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.8s" name="DOB"
                             type="date" placeholder="Date of birth">
                         <select class="col-md-4 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.8s" id="gender"
@@ -80,6 +84,7 @@ include 'SignupValid.php';
         crossorigin="anonymous"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/signup.js"></script>
 </body>
 
 </html>

@@ -204,3 +204,21 @@ body {
   color: white;
   box-shadow: 2px 2px 4px 4px lightgray;
 }
+
+#signup .form-container .container .row #FN_msg
+{
+  display: none;
+}
+#signup .form-container .container .row #LN_msg
+{
+  display: none;
+}
+#signup .form-container .container .row #email_msg
+{
+  display: none;
+}
+
+#signup .form-container .container .row #password_msg
+{
+  display: none;
+}
