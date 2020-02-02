@@ -23,22 +23,22 @@ include 'SignupValid.php';
         <div class="form-container">
             <h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1">Shift User Sign-Up</h1>
             <hr>
-            <form method="POST" action="Signup.php" name="login-form" onsubmit="return (check_all())">
+            <form method="POST" action="Signup.php" name="login-form" onsubmit="return (check_all ())">
                 <div class="container">
                     <div class="row">
                         <input class="col-md-4 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.5s"
-                            name="first-name" type="text" placeholder="First Name">
+                            name="first-name" type="text" placeholder="First Name" onchange="check_first_name()">
                             <span id="FN_msg"> enter your first name </span>
                         <input class="col-md-4 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.5s"
-                            name="last-name" type="text" placeholder="Last Name">
+                            name="last-name" type="text" placeholder="Last Name" onchange="check_Last_name()">
                             <span id="LN_msg"> enter your last name </span>
                         <input class="col-md-7 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.6s" name="email"
-                            type="email" placeholder="Email Address">
+                            type="email" placeholder="Email Address" onchange="check_email ()">
                             <span id="email_msg"> invalid mail </span>
                         <input class="col-md-4 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.7s"
                             name="password" type="password" placeholder="Password">
                         <input class="col-md-4 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.7s"
-                            name="confirm-password" type="password" placeholder="Confirm Password">
+                            name="confirm-password" type="password" placeholder="Confirm Password" onchange="check_password ()">
                             <span id="password_msg"> non matching password </span>
                         <input class="col-md-4 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.8s" name="DOB"
                             type="date" placeholder="Date of birth">
@@ -49,7 +49,8 @@ include 'SignupValid.php';
                             <option value="Not Specified">Prefer not to say</option>
                         </select>
                         <input class="col-md-4 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.8s" name="phone"
-                            type="number" placeholder="Phone Number">
+                            type="number" placeholder="Phone Number" onchange="check_number()">
+                            <span id="number_msg"> invalid number </span>
                         <input class="col-md-4 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.8s"
                             name="country" type="text" placeholder="Country">
                         <select class="col-md-4 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.8s"

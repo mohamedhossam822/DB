@@ -222,3 +222,8 @@ body {
 {
   display: none;
 }
+
+#signup .form-container .container .row #number_msg
+{
+  display: none;
+}
