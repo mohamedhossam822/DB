@@ -6,7 +6,7 @@ function check_password ()
 
 	if (!(passwordconfirm==current) || !(current) || !(passwordconfirm))
 	{
-		alert("Password error ");
+		document.getElementById("password_msg").style.display='';
 
 	}
 	else
@@ -43,12 +43,13 @@ function check_first_name()
 	let flag =0;
 	if ((name==""))
 	{
-		alert("First name is required ! " );
+		document.getElementById("FN_msg").style.display='';
 
     }
     else if (check_username_all_char (name))
     {
-        alert ("Name has number in it ");
+			document.getElementById("FN_msg").textContent="first name has number in it ";
+      document.getElementById("FN_msg").style.display='';
     }
 	else
 		flag=1;
@@ -61,12 +62,13 @@ function check_Last_name()
 	let flag =0;
 	if ((name==""))
 	{
-		alert("Last name is required ! " );
+		document.getElementById("LN_msg").style.display='';
 
     }
     else if (check_username_all_char (name))
     {
-        alert ("Name has number in it ");
+			document.getElementById("LN_msg").textContent="last name has number in it ";
+			document.getElementById("LN_msg").style.display='';
     }
 	else
 		flag=1;
@@ -79,7 +81,7 @@ function check_email ()
 	let email = document.getElementsByName("email")[0].value;
 	if (!(email) || !(email.includes(".com")) || !(email.includes("@")))
 	{
-		alert("Mail error" );
+			document.getElementById("email_msg").style.display='';
 	}
 	else
 		flag=1;
@@ -95,6 +97,7 @@ function check_number()
 
  	 if (test[i]!='0' || test[i]!='1' || test[i]!='2' || test[i]!='3' || test[i]!='4' || test[i]!='5' || test[i]!='6' || test[i]!='7' || test[i]!='8' || test[i]!='9' )
       {
+			 document.getElementById("number_msg").style.display=''; 
              return 1;
              break ;
       }
