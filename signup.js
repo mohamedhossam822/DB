@@ -12,8 +12,10 @@ function check_password ()
 		document.getElementById("pw_div").textContent = " * password cannot be empty";
 		return false;
 	}
-	return true;
-
+	else{
+		document.getElementById("pw_div").textContent = "";
+		return true;
+	}
 }
 
 function check_username_all_char (test) //need to be checked again
@@ -34,8 +36,10 @@ function check_first_name()
       return false;
     }
 	else
+	{
+		document.getElementById("fn_div").textContent="";
 		return true;
-
+	}
 }
 function check_Last_name()
 {
@@ -50,8 +54,11 @@ function check_Last_name()
 			document.getElementById("ln_div").textContent="* last name cant have a number in it ";
 			return false;
     }
-	else
-		return true;
+	else{
+			document.getElementById("ln_div").textContent="";
+			return true;
+	}
+
 
 }
 
@@ -67,7 +74,11 @@ function check_email ()
 		document.getElementById("email_div").textContent="* Email invalid";
 		return false;
 	}
-	return true;
+	else{
+		document.getElementById("email_div").textContent="";
+		return true;
+	}
+
 }
 
 function check_number()
@@ -82,7 +93,11 @@ function check_number()
 		document.getElementById("num_div").textContent="* invalid phone number";
 		return false;
 	}
-	return true;
+	else{
+		document.getElementById("num_div").textContent="";
+		return true;
+	}
+
 }
 
 function check_all()
