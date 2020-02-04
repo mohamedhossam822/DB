@@ -1,120 +1,110 @@
 function check_password ()
 {
-	let current = document.getElementById("password").value;
-	let passwordconfirm = document.getElementById("confirm-password").value;
-	let flag=0;
+	let current = document.getElementById("pw").value;
+	let passwordconfirm = document.getElementById("con_pw").value;
 
-	if (!(passwordconfirm==current) || !(current) || !(passwordconfirm))
+	if (!(passwordconfirm==current))
 	{
-		document.getElementById("password_msg").style.display='';
-
+		document.getElementById("pw_div").textContent = " * passwords doesnt match";
+		return false;
 	}
-	else
-		flag=1;
-	return flag;
-
+	else if(!(current) || !(passwordconfirm)){
+		document.getElementById("pw_div").textContent = " * password cannot be empty";
+		return false;
+	}
+	else{
+		document.getElementById("pw_div").textContent = "";
+		return true;
+	}
 }
 
 function check_username_all_char (test) //need to be checked again
 {
- let i=0;
- let flag=0;
- for (i in test )
- {
-
-	 if (test[i]=='0' || test[i]=='1' || test[i]=='2' || test[i]=='3' || test[i]=='4' || test[i]=='5' || test[i]=='6' || test[i]=='7' || test[i]=='8' || test[i]=='9' )
-     {
-            flag=1;
-
-     }
-		 if (flag)
-		 {
-			 return flag;
-			 break;
-		 }
-
- }
- return flag ;
-
+	return /\d/.test(test);
 }
 function check_first_name()
 {
-	let name = document.getElementsByName("first-name")[0].value;
-	let flag =0;
+	let name = document.getElementById("fn").value;
 	if ((name==""))
 	{
-		document.getElementById("FN_msg").style.display='';
-
-    }
+		document.getElementById("fn_div").textContent = "* please enter your name";
+		return false;
+  }
     else if (check_username_all_char (name))
     {
-			document.getElementById("FN_msg").textContent="first name has number in it ";
-      document.getElementById("FN_msg").style.display='';
+			document.getElementById("fn_div").textContent="* first name cant have a number in it ";
+      return false;
     }
 	else
-		flag=1;
-	return flag;
-
+	{
+		document.getElementById("fn_div").textContent="";
+		return true;
+	}
 }
 function check_Last_name()
 {
-	let name = document.getElementsByName("last-name")[0].value;
-	let flag =0;
+	let name = document.getElementById("ln").value;
 	if ((name==""))
 	{
-		document.getElementById("LN_msg").style.display='';
-
+		document.getElementById("ln_div").textContent = "* please enter your lastname";
+		return false;
     }
     else if (check_username_all_char (name))
     {
-			document.getElementById("LN_msg").textContent="last name has number in it ";
-			document.getElementById("LN_msg").style.display='';
+			document.getElementById("ln_div").textContent="* last name cant have a number in it ";
+			return false;
     }
-	else
-		flag=1;
-	return flag;
+	else{
+			document.getElementById("ln_div").textContent="";
+			return true;
+	}
+
 
 }
 
 function check_email ()
 {
-	let email = document.getElementsByName("email")[0].value;
-	if (!(email) || !(email.includes(".com")) || !(email.includes("@")))
-	{
-			document.getElementById("email_msg").style.display='';
+	let mailgot = document.getElementById("mail").value;
+	let regx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(!mailgot){
+		document.getElementById("email_div").textContent="* please enter your email";
+		return false;
 	}
-	else
-		flag=1;
-	return flag;
+	else if(!regx.test(mailgot)){
+		document.getElementById("email_div").textContent="* Email invalid";
+		return false;
+	}
+	else{
+		document.getElementById("email_div").textContent="";
+		return true;
+	}
+
 }
 
 function check_number()
 {
-  let number = document.getElementsByName("phone")[0].value;
-  let i=0;
-  for (i in number )
-  {
+	let numb = document.getElementById("phone_num").value;
+	let reg = /^\d+$/;
+	if(!numb){
+		document.getElementById("num_div").textContent="* please enter your phone number";
+		return false;
+	}
+	else if(!reg.test(numb)){
+		document.getElementById("num_div").textContent="* invalid phone number";
+		return false;
+	}
+	else{
+		document.getElementById("num_div").textContent="";
+		return true;
+	}
 
- 	 if (test[i]!='0' || test[i]!='1' || test[i]!='2' || test[i]!='3' || test[i]!='4' || test[i]!='5' || test[i]!='6' || test[i]!='7' || test[i]!='8' || test[i]!='9' )
-      {
-			 document.getElementById("number_msg").style.display=''; 
-             return 1;
-             break ;
-      }
-  }
-  return 0 ;
 }
 
-function check_all ()
+function check_all()
 {
-
-	if (check_first_name() && check_Last_name()  && check_email() && check_password () && check_number())
-		 console.log("welcome summoner ");//proceed
-
+	console.log("d5lt check all");
+	if(check_first_name() && check_Last_name() && check_email() && check_password() && check_number())
+	return true;
+	else
+	return false;
 }
-
-
-
-
-let dt = new Date();
-document.getElementById("datetime").innerHTML = dt.toLocaleString();
