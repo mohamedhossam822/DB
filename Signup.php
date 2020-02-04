@@ -71,9 +71,11 @@ include 'SignupValid.php';
                     </div>
                 </div>
                 <div class="btn-group">
-                  <input class="btn btn-primary wow fadeInRight" type="submit" name="" value="Submit">
-                    <a href="index.php" role="button" class="btn btn-primary wow fadeInRight" data-wow-duration="1s"
-                        data-wow-delay="1s">Back to login</a>
+
+                      <button role="button" class="btn btn-primary wow fadeInLeft" data-wow-duration="1s"
+                          data-row-delay="1s" type="submit" name="submit">Submit</button>
+                    <a href="index.php" role="button" class="btn btn-primary wow fadeInRight"
+                        data-wow-duration="1s" data-row-delay="1s">Back to login</a>
                 </div>
             </form>
         </div>

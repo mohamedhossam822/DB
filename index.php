@@ -33,7 +33,7 @@ include 'LoginCheck.php';
                         <div class="red-text"><?php echo $error; ?></div>
                     <div class="btn-group">
                         <button role="button" class="btn btn-primary wow fadeInLeft" data-wow-duration="1s"
-                            data-row-delay="1s" type="submit" name="submit">Login</button>
+                            data-row-delay="1s" type="submit" >Login</button>
                         <a href="Signup.php" role="button" class="btn btn-primary wow fadeInRight"
                             data-wow-duration="1s" data-row-delay="1s">Sign-Up</a>
                     </div>

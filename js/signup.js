@@ -102,8 +102,13 @@ function check_number()
 
 function check_all()
 {
-	console.log("d5lt check all");
-	if(check_first_name() && check_Last_name() && check_email() && check_password() && check_number())
+	let v1 = check_first_name();
+	let v2 = check_Last_name();
+	let v3 = check_email();
+	let v4 = check_password();
+	let v5 = check_number();
+
+	if(v1 && v2 && v3 && v4 && v5)
 	return true;
 	else
 	return false;
